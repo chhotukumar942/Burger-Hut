@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-12 bg-gray-200">
+    <section id="testimonials" className="py-12 select-none bg-gray-200">
       <h3 className="text-3xl text-center font-bold mb-8">Customer Reviews</h3>
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Example Testimonial 1 */}

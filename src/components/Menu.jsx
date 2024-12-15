@@ -54,7 +54,7 @@ export default function Menu() {
   ];
 
   return (
-    <section id="menu" className="py-12 bg-yellow-50 cursor-pointer">
+    <section id="menu" className="py-12 select-none bg-yellow-50 cursor-pointer">
       <h3 className="text-3xl text-center font-bold mb-8">Our Menu</h3>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
         {menuItems.map((item) => (

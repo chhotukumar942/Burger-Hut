@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <hr />
-      <div className="bg-[#111827]">
+      <div className="bg-[#111827] select-none">
         <footer className="bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-center items-center h-auto md:h-28 text-center gap-4 md:gap-8 text-sm sm:text-base md:text-lg lg:text-xl font-bold ">
           {/* Copyright Section */}
           <p className="">

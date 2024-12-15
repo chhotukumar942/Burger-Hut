@@ -26,7 +26,7 @@ export default function Services() {
     <section
       ref={sectionRef}
       id="services"
-      className="py-12 cursor-pointer bg-gray-100"
+      className="py-12 select-none cursor-pointer bg-gray-100"
     >
       <h3 className="text-3xl text-center font-bold mb-8">Our Services</h3>
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-0">
@@ -97,7 +97,7 @@ export default function Services() {
               className="w-12 h-12"
             >
 
-              
+
               <path d="M3 12a9 9 0 0 1 18 0 9 9 0 0 1-18 0zm6-1a1 1 0 1 1 2 0v2h2a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1v-2z" />
             </svg>
           </div>

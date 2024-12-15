@@ -23,13 +23,13 @@ export default function Navbar() {
             <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12C24 5.373 18.627 0 12 0zm0 22c-5.514 0-10-4.486-10-10S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
             <path d="M12 5c-1.333 0-2.5 1.333-2.5 2.5S10.667 10 12 10s2.5-1.333 2.5-2.5S13.333 5 12 5zm0 12c-1.333 0-2.5 1.333-2.5 2.5S10.667 22 12 22s2.5-1.333 2.5-2.5S13.333 17 12 17z" />
           </svg>
-          <h1 className="text-white text-3xl md:text-4xl font-bold hover:-rotate-12 hover:text-yellow-400">
+          <h1 className="text-white text-3xl md:text-4xl select-none font-bold hover:-rotate-12 hover:text-yellow-400">
             Burger Hut
           </h1>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-4 text-lg">
+        <div className="hidden md:flex select-none space-x-4 text-lg">
           <a href="#menu" className="nav-link hover:font-bold">
             Menu
           </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 text-white p-4 space-y-2">
+        <div className="md:hidden bg-gray-800 select-none text-white p-4 space-y-2">
           <a
             href="#menu"
             className="block nav-link text-lg hover:font-bold"

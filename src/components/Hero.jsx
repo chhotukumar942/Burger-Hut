@@ -12,7 +12,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="h-screen bg-gray-900 flex items-center justify-center relative text-white">
+    <div className="h-screen select-none bg-gray-900 flex items-center justify-center relative text-white">
       {/* Fixed Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
