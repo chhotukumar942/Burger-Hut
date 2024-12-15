@@ -13,7 +13,7 @@ export default function Footer() {
 
           {/* Developer Credit */}
           <p className="">
-           Design & Developed By: <span className="text-yellow-400">Chhotu Kumar (Rakesh)</span>
+           Design & Developed By: <span className="text-yellow-400">Chhotu Kumar </span>
           </p>
         </footer>
       </div>

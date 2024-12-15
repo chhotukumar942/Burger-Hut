@@ -76,7 +76,7 @@ export default function Menu() {
             <p className="text-gray-600">{item.price}</p>
   
             {/* Order Button */}
-            <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 transform hover:translate-x-2">
+            <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
               Order Now
             </button>
           </div>
