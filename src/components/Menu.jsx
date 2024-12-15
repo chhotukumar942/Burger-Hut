@@ -69,7 +69,7 @@ export default function Menu() {
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
   
-            {/* Menu Item Name */}
+           
             <h4 className="text-xl font-semibold">{item.name}</h4>
   
             {/* Price */}

@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
 
-
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
@@ -24,5 +23,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

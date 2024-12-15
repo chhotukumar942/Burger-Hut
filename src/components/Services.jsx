@@ -96,6 +96,8 @@ export default function Services() {
               viewBox="0 0 24 24"
               className="w-12 h-12"
             >
+
+              
               <path d="M3 12a9 9 0 0 1 18 0 9 9 0 0 1-18 0zm6-1a1 1 0 1 1 2 0v2h2a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1v-2z" />
             </svg>
           </div>
