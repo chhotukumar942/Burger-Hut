@@ -1,5 +1,5 @@
 // src/components/Testimonials.js
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Testimonials() {
   const testimonials = [
@@ -53,6 +53,20 @@ export default function Testimonials() {
     }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const testimonialsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
+
+  const showNextTestimonials = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const getCurrentTestimonials = () => {
+    const start = currentIndex * testimonialsPerPage;
+    const end = start + testimonialsPerPage;
+    return testimonials.slice(start, end);
+  };
+
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -87,8 +101,14 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="relative">
+          {/* Testimonials Container */}
+          <div className="overflow-hidden">
+            <div 
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 transition-all duration-500 ease-in-out"
+              style={{ transform: `translateX(0%)` }}
+            >
+              {getCurrentTestimonials().map((testimonial, index) => (
             <div
               key={testimonial.id}
               className="group relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 overflow-hidden border border-white/30 transform hover:scale-105 hover:-rotate-1"
@@ -181,7 +201,29 @@ export default function Testimonials() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-3xl"></div>
               </div>
             </div>
-          ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Next Button */}
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={showNextTestimonials}
+              className="group bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 text-white font-black py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-lg flex items-center gap-3"
+            >
+              <span>View More Reviews</span>
+              <svg className="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Progress Indicator */}
+          <div className="flex justify-center items-center gap-2 mt-6">
+            <span className="text-sm text-slate-600 font-medium">
+              Showing {currentIndex + 1} of {totalPages} sets
+            </span>
+          </div>
         </div>
 
         {/* Call to Action */}

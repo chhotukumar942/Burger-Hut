@@ -18,20 +18,47 @@ export default function Navbar() {
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 backdrop-blur-lg cursor-pointer p-4 sticky top-0 z-50 border-b border-white/10">
       <div className="container h-16 mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2 transform hover:scale-105 transition-all duration-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10 hover:rotate-45 hover:text-white text-yellow-400 transition-all duration-300"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12C24 5.373 18.627 0 12 0zm0 22c-5.514 0-10-4.486-10-10S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
-            <path d="M12 5c-1.333 0-2.5 1.333-2.5 2.5S10.667 10 12 10s2.5-1.333 2.5-2.5S13.333 5 12 5zm0 12c-1.333 0-2.5 1.333-2.5 2.5S10.667 22 12 22s2.5-1.333 2.5-2.5S13.333 17 12 17z" />
-          </svg>
-          <h1 className="text-white text-3xl md:text-4xl select-none font-bold hover:-rotate-12 hover:text-yellow-400 transition-all duration-300">
-            Burger Hut
-          </h1>
+        {/* New Modern Logo */}
+        <Link to="/" className="group flex items-center space-x-3 transform hover:scale-105 transition-all duration-300">
+          <div className="relative">
+            {/* Animated Background Rings */}
+            <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-30 blur-lg transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 transition-all duration-300"></div>
+            
+            {/* Main Logo Container */}
+            <div className="relative w-14 h-14 bg-gradient-to-br from-slate-800 via-gray-900 to-slate-800 rounded-full flex items-center justify-center shadow-2xl border-2 border-white/20 group-hover:border-cyan-400/50 transition-all duration-300">
+              {/* Inner Gradient Circle */}
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-700">
+                {/* Burger Icon */}
+                <div className="text-white text-xl group-hover:scale-110 transition-all duration-300">
+                  🍔
+                </div>
+              </div>
+              
+              {/* Decorative Dots */}
+              <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping"></div>
+              <div className="absolute bottom-1 left-1 w-1 h-1 bg-blue-400 rounded-full animate-ping delay-500"></div>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <h1 className="text-white text-2xl md:text-3xl font-black tracking-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-blue-400 group-hover:to-purple-500 transition-all duration-500">
+                Burger
+              </span>
+              <span className="text-white ml-1 group-hover:text-cyan-300 transition-colors duration-300">
+                Hut
+              </span>
+            </h1>
+            
+            {/* Animated Underline */}
+            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 group-hover:w-full transition-all duration-500"></div>
+            
+            {/* Tagline */}
+            <div className="absolute -bottom-5 left-0 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+              Premium Burgers
+            </div>
+          </div>
         </Link>
 
         {/* Desktop Menu */}

@@ -70,88 +70,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Contact Information */}
-          <div className="lg:col-span-5">
-            <div className="bg-gradient-to-br from-white/10 to-cyan-50/5 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20">
-              <h3 className="text-2xl md:text-3xl font-black text-white mb-8">
-                Reach Out to Us
-              </h3>
-              
-              <div className="space-y-6">
-                {/* Address */}
-                <div className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-cyan-300 mb-1">Address</h4>
-                    <p className="text-gray-300 leading-relaxed">
-                      123 Burger Street<br />
-                      Food District, City 12345<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl">📱</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-emerald-300 mb-1">Phone</h4>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
-                    <p className="text-gray-300">+1 (555) 987-6543</p>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl">✉️</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-purple-300 mb-1">Email</h4>
-                    <p className="text-gray-300">info@burgerhut.com</p>
-                    <p className="text-gray-300">orders@burgerhut.com</p>
-                  </div>
-                </div>
-
-                {/* Hours */}
-                <div className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl">🕒</span>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-amber-300 mb-1">Hours</h4>
-                    <p className="text-gray-300">Mon - Thu: 11AM - 10PM</p>
-                    <p className="text-gray-300">Fri - Sat: 11AM - 11PM</p>
-                    <p className="text-gray-300">Sunday: 12PM - 9PM</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div className="mt-8">
-                <h4 className="text-lg font-bold text-white mb-4">Follow Us</h4>
-                <div className="flex gap-4">
-                  <button className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-xl">📘</span>
-                  </button>
-                  <button className="w-12 h-12 bg-gradient-to-br from-pink-600 to-rose-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-xl">📷</span>
-                  </button>
-                  <button className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-white text-xl">🐦</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="max-w-4xl mx-auto">
           {/* Contact Form */}
-          <div className="lg:col-span-7">
+          <div>
             <div className="bg-gradient-to-br from-white/10 to-cyan-50/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/20">
               <h3 className="text-2xl md:text-3xl font-black text-white mb-8">
                 Send Us a Message
