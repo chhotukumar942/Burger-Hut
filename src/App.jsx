@@ -1,34 +1,48 @@
 // src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+// Components
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Menu from './components/Menu';
-import Monials from './components/Monials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import LocomotiveScroll from 'locomotive-scroll';
 
-
-
-
+// Pages
+import HomePage from './pages/HomePage';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import OrderConfirm from './pages/OrderConfirm';
+import OrderTracking from './pages/OrderTracking';
+import TableBooking from './pages/TableBooking';
+import BookingConfirmation from './pages/BookingConfirmation';
+import Login from './pages/Login';
+import OrderDetails from './pages/OrderDetails';
+import OrderHistory from './pages/OrderHistory';
 
 function App() {
-  const locomotiveScroll = new LocomotiveScroll();
-
-
-  
-
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Services />
-      <Menu />
-      <Monials />
-      <Contact />
-      <Footer />
-    </div>
+    <Provider store={store}>
+      <Router>
+        <div className="min-h-screen bg-gray-900">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/order-confirmation" element={<OrderConfirm />} />
+            <Route path="/order-tracking" element={<OrderTracking />} />
+            <Route path="/order-details" element={<OrderDetails />} />
+            <Route path="/order-details/:orderId" element={<OrderDetails />} />
+            <Route path="/order-history" element={<OrderHistory />} />
+            <Route path="/table-booking" element={<TableBooking />} />
+            <Route path="/booking-confirmation" element={<BookingConfirmation />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 export default App;

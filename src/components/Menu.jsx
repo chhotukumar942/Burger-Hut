@@ -1,7 +1,11 @@
 // src/components/Menu.js
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/cartSlice';
+import { ShoppingCart, Plus } from 'lucide-react';
 
 export default function Menu() {
+  const dispatch = useDispatch();
   const menuItems = [
     {
       id: 1,
@@ -53,6 +57,10 @@ export default function Menu() {
     },
   ];
 
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+  };
+
   return (
     <section id="menu" className="py-12 select-none bg-yellow-50 cursor-pointer">
       <h3 className="text-3xl text-center font-bold mb-8">Our Menu</h3>
@@ -60,24 +68,38 @@ export default function Menu() {
         {menuItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white p-6 hover:translate-x-2 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+            className="bg-white p-6 hover:translate-x-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group"
           >
             {/* Image Section */}
-            <img
-              src={item.imageUrl}
-              alt={item.name}
-              className="w-full h-40 object-cover rounded-lg mb-4"
-            />
+            <div className="relative overflow-hidden rounded-lg mb-4">
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              {/* Quick Add Button */}
+              <button
+                onClick={() => handleAddToCart(item)}
+                className="absolute top-2 right-2 bg-yellow-500 hover:bg-yellow-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-110"
+                title="Quick Add to Cart"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
+            </div>
   
-           
-            <h4 className="text-xl font-semibold">{item.name}</h4>
+            {/* Item Details */}
+            <h4 className="text-xl font-semibold mb-2">{item.name}</h4>
   
             {/* Price */}
-            <p className="text-gray-600">{item.price}</p>
+            <p className="text-gray-600 text-lg font-bold mb-4">{item.price}</p>
   
             {/* Order Button */}
-            <button className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
-              Order Now
+            <button 
+              onClick={() => handleAddToCart(item)}
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              Add to Cart
             </button>
           </div>
         ))}
